@@ -101,7 +101,7 @@ const Login = () => {
           <p className="text-white">
             Forget Password?{" "}
             <Link
-              className="text-decoration-none text-warning"
+              className="text-decoration-none text-info"
               to="/login"
               onClick={handleResetPassword}
             >
@@ -109,7 +109,7 @@ const Login = () => {
             </Link>
           </p>
           <input type="submit" value="Login" className="input-submit" />
-          <p className="text-white">
+          <p className="text-info">
             Not a member?
             <Link className="text-decoration-none text-warning" to={"/signup"}>
               SignUP
