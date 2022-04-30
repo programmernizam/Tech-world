@@ -10,7 +10,7 @@ const RecentItems = () => {
       .then((data) => setItems(data));
   }, []);
   return (
-    <section className="container home-items">
+    <section className="container home-items py-5">
       <h2 className="text-center my-4">Most Recent Items</h2>
       <Row xs={1} md={3} className="g-4">
         {items.map((item) => (
