@@ -1,0 +1,30 @@
+#login-form{
+    background: #f2fffa;
+    border-radius: 10px;
+    width: 450px;
+}
+#login-form h2{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff
+}
+.input-filed{
+    width: 100%;
+    outline: none;
+    border: none;
+    margin: 8px 0;
+    padding: 6px;
+    border-radius: 3px;
+}
+.input-submit{
+    display: block;
+    width: 50%;
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    padding: 4px 0px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
