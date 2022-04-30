@@ -17,7 +17,7 @@ const RecentItem = ({ item }) => {
             </div>
           </Card.Text>
           <Card.Text>{description}</Card.Text>
-          <button className="btn btn-warning rounded-pill px-5">Update</button>
+          <button className="btn btn-danger rounded-pill px-5">Update</button>
         </Card.Body>
       </Card>
     </Col>

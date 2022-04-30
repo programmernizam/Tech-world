@@ -13,7 +13,8 @@ const Footer = () => {
           <Col className="mb-3">
             <img src={Logo} alt="" />
             <p className="my-4">
-              
+              Technology has become a part of our daily lives and for a huge
+              portion of our life, we are dependent on tech products daily
             </p>
           </Col>
           <Col className="d-flex justify-content-lg-center mb-3">
@@ -28,16 +29,16 @@ const Footer = () => {
           <Col>
             <Row>
               <Col>
-                <FaFacebookF className="bg-info p-2 rounded fs-1"></FaFacebookF>
+                <FaFacebookF className="bg-danger p-2 rounded fs-1"></FaFacebookF>
               </Col>
               <Col>
-                <BsTwitter className="bg-info p-2 rounded fs-1"></BsTwitter>
+                <BsTwitter className="bg-danger p-2 rounded fs-1"></BsTwitter>
               </Col>
               <Col>
-                <AiFillInstagram className="bg-info p-2 rounded fs-1"></AiFillInstagram>
+                <AiFillInstagram className="bg-danger p-2 rounded fs-1"></AiFillInstagram>
               </Col>
               <Col>
-                <AiFillYoutube className="bg-info p-2 rounded fs-1"></AiFillYoutube>
+                <AiFillYoutube className="bg-danger p-2 rounded fs-1"></AiFillYoutube>
               </Col>
               <Col></Col>
               <Col></Col>
