@@ -19,7 +19,7 @@ const Reviews = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className="mySwiper bg-white"
         >
           <SwiperSlide>
             <div className="text-center p-5">

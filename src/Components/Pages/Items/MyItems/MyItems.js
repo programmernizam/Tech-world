@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
-import RecentItem from "../RecentItem/RecentItem";
+import MyItem from "../MyItem/MyItem";
 
-const RecentItems = () => {
+const MyItems = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/items")
@@ -11,14 +11,14 @@ const RecentItems = () => {
   }, []);
   return (
     <section className="container home-items py-5">
-      <h2 className="text-center my-4">Most Recent Items</h2>
+      <h2 className="text-center my-4">All of My Items</h2>
       <Row xs={1} md={3} className="g-4">
         {items.map((item) => (
-          <RecentItem key={item._id} item={item}/>
+          <MyItem key={item._id} item={item} />
         ))}
       </Row>
     </section>
   );
 };
 
-export default RecentItems;
+export default MyItems;

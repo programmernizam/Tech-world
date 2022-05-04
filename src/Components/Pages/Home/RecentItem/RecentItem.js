@@ -5,7 +5,7 @@ const RecentItem = ({ item }) => {
   const { name, description, price, img, seller, quantity } = item;
   return (
     <Col>
-      <Card className="h-100">
+      <Card className="h-100 shadow border-0">
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
@@ -16,7 +16,7 @@ const RecentItem = ({ item }) => {
               <span className="shadow-sm p-2 border rounded">Seller: {seller}</span>
             </div>
           </Card.Text>
-          <Card.Text>{description}</Card.Text>
+          <Card.Text title={description}>{description.slice(0, 138)}</Card.Text>
           <button className="btn btn-danger rounded-pill px-5">Update</button>
         </Card.Body>
       </Card>

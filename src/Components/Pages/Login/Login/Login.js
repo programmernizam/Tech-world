@@ -9,6 +9,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -71,6 +72,7 @@ const Login = () => {
 
   return (
     <Container>
+      <PageTitle title={'Login'}/>
       <div className="shadow p-5 my-5 mx-auto" id="login-form">
         <h2>Login Here</h2>
         <form onSubmit={handleSubmit}>
@@ -109,9 +111,9 @@ const Login = () => {
             </Link>
           </p>
           <input type="submit" value="Login" className="input-submit" />
-          <p className="text-info">
+          <p className="text-white">
             Not a member?
-            <Link className="text-decoration-none text-warning" to={"/signup"}>
+            <Link className="text-decoration-none text-info" to={"/signup"}>
               SignUP
             </Link>
           </p>
