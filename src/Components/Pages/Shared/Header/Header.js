@@ -5,8 +5,9 @@ import Logo from '../../../../images/logo.png'
 import CustomLink from "../CustomLink/CustomLink";
 
 const Header = () => {
+  
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
       <Container>
         <Navbar.Brand className="w-50" as={Link} to="/"><img className="w-50" src={Logo} alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>

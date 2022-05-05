@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row } from "react-bootstrap";
+import useItem from "../../../Hooks/useItem/useItem";
 import MyItem from "../MyItem/MyItem";
 
 const MyItems = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/items")
-      .then((res) => res.json())
-      .then((data) => setItems(data));
-  }, []);
+  const [items] = useItem();
   return (
     <section className="container home-items py-5">
       <h2 className="text-center my-4">All of My Items</h2>
