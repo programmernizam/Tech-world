@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Difference between javascript and nodejs",
+    "text": "1.Javascript is a programming language that is used for writing scripts on the website or NodeJS is a Javascript runtime environment, 2.Javascript can only be run in the browsers or We can run Javascript outside the browser with the help of NodeJS, 3.It is basically used on the client-side or It is mostly used on the server-side, 4.Javascript is capable enough to add HTML and play with the DOM or Nodejs does not have capability to add HTML tags, 5.Javascript is used in frontend development or Nodejs is used in server-side development.",
+    "img": "https://cdn.educba.com/academy/wp-content/uploads/2018/07/Java-Script-vs-Node-JS-1.png"
+  },
+  {
+    "id": "2",
+    "name": "Differences between sql and nosql databases",
+    "text": "1: SQL databases are relational, NoSQL databases are non-relational. 2: SQL databases use structured query language and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data. 3: SQL databases are vertically scalable, while NoS databases are horizontally scalable. 4: SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores. 5: SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON.",
+    "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191104165821/SQL-Vs-NoSQL1.png"
+  },
+  {
+    "id": "3",
+    "name": "What is the purpose of jwt and how does it work",
+    "text": "JWT is JSON Web Token, is an open standard used to share security information between two parties — a client and a server. JWTs differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.A JWT is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaaEGtC7DVp5wlMA3MWRWWkzFF0IzhQ8beag&usqp=CAU"
+  }
+]

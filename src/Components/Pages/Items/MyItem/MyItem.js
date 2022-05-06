@@ -3,6 +3,7 @@ import { Card, Col } from "react-bootstrap";
 
 const MyItem = ({ item }) => {
   const { name, description, price, img, seller, quantity } = item;
+
   return (
     <Col>
       <Card className="h-100 shadow border-0">

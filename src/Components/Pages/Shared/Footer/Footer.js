@@ -63,7 +63,7 @@ const Footer = () => {
         </Row>
         <div className="text-center">
           <hr />
-          <p>Copyright © reserved by MARTIN {new Date().getFullYear()}</p>
+          <p>Copyright © reserved by TECH WORLD {new Date().getFullYear()}</p>
         </div>
       </Container>
     </footer>
