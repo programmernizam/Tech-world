@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const RecentItem = ({ item }) => {
   const { name, description, price, img, seller, quantity } = item;
@@ -10,7 +11,7 @@ const RecentItem = ({ item }) => {
         <Card.Body className="text-center">
           <Card.Title>{name}</Card.Title>
           <Card.Text className="pe-4">
-            <div className="d-flex justify-content-between">
+            <span className="d-flex justify-content-between">
               <span className="shadow-sm p-2 border rounded">
                 Price: ${price}
               </span>
@@ -20,12 +21,12 @@ const RecentItem = ({ item }) => {
               <span className="shadow-sm p-2 border rounded">
                 Seller: {seller}
               </span>
-            </div>
+            </span>
           </Card.Text>
           <Card.Text title={description}>{description.slice(0, 160)}</Card.Text>
           <div className="d-flex justify-content-around">
             <button className="btn btn-primary rounded-pill px-5">Buy Now</button>
-            <button className="btn btn-danger rounded-pill px-5">Update</button>
+            <button className="btn btn-danger rounded-pill px-5"><Link className="text-decoration-none text-light" to={'/manageitems'}>Update</Link></button>
           </div>
         </Card.Body>
       </Card>
