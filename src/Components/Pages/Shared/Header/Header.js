@@ -33,6 +33,9 @@ const Header = () => {
             <Nav.Link as={CustomLink} to="/manageitems">
               Manage Items
             </Nav.Link>
+            <Nav.Link as={CustomLink} to="/inventories">
+              Inventory
+            </Nav.Link>
             <Nav.Link as={CustomLink} to="/blogs">
               Blogs
             </Nav.Link>
@@ -49,7 +52,6 @@ const Header = () => {
 
                   <Dropdown.Menu>
                     <Dropdown.Item as={CustomLink} to="additem">Add Item</Dropdown.Item>
-                    <Dropdown.Item as={CustomLink} to="myitems">My Item</Dropdown.Item>
                     <Dropdown.Item as={Button} onClick={handelSignOut}>Sign Out</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

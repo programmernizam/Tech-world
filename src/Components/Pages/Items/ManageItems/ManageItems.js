@@ -16,10 +16,10 @@ const ManageItems = () => {
         .then((res) => res.json())
         .then((data) => {
           toast("Item successfully deleted");
-          console.log(data);
           const remaining = items.filter((item) => item._id !== id);
           setItems(remaining);
         });
+        setItems([])
     }
   };
   return (

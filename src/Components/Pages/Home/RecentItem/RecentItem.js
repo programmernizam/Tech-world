@@ -1,9 +1,13 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RecentItem = ({ item }) => {
-  const { name, description, price, img, seller, quantity } = item;
+  const navigate = useNavigate();
+  const { _id, name, description, price, img, seller, quantity } = item;
+  const navigateToItemDetail = (id) => {
+    navigate(`/item/${id}`);
+  };
   return (
     <Col>
       <Card className="h-100 shadow border-0">
@@ -25,8 +29,20 @@ const RecentItem = ({ item }) => {
           </Card.Text>
           <Card.Text title={description}>{description.slice(0, 160)}</Card.Text>
           <div className="d-flex justify-content-around">
-            <button className="btn btn-primary rounded-pill px-5">Buy Now</button>
-            <button className="btn btn-danger rounded-pill px-5"><Link className="text-decoration-none text-light" to={'/manageitems'}>Update</Link></button>
+            <button
+              onClick={() => navigateToItemDetail(_id)}
+              className="btn btn-primary rounded-pill px-5"
+            >
+              Update
+            </button>
+            <button className="btn btn-danger rounded-pill px-5">
+              <Link
+                className="text-decoration-none text-light"
+                to={"/manageitems"}
+              >
+                Edit
+              </Link>
+            </button>
           </div>
         </Card.Body>
       </Card>
