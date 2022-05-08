@@ -8,20 +8,29 @@ const ItemDetails = () => {
   const { itemId } = useParams();
   const [item] = useItemDetails(itemId);
   const handleDelivered = () => {
-    const updateQuantity = item?.quantity - 1;
-    // send update data to the server
-    const url = `https://quiet-sands-26329.herokuapp.com/items/${itemId}`;
-    console.log(url);
-    fetch(url, {
-      method: "put",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ updateQuantity }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    if (item.quantity > 0) {
+      const updateQuantity = item?.quantity - 1;
+      // send update data to the server
+      const url = `https://quiet-sands-26329.herokuapp.com/items/${itemId}`;
+      console.log(url);
+      fetch(url, {
+        method: "put",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ updateQuantity }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (item.quantity > 0) {
+            toast("Item successfully delivered");
+          }
+          item.quantity(data);
+        });
+    }
+    toast("Item have out of stock")
   };
+
   const handleStock = (e) => {
     e.preventDefault();
     const number = e.target.quantity.value;
@@ -37,7 +46,7 @@ const ItemDetails = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          toast('Successfully added stocks')
+          toast("Successfully added stocks");
           e.target.reset();
         });
     } else {
@@ -69,7 +78,7 @@ const ItemDetails = () => {
                 In Stock:{" "}
                 <span>
                   {item.quantity === 0 ? (
-                    <span>Out of stock</span>
+                    <span className="text-danger">Out of stock</span>
                   ) : (
                     <span>{item?.quantity}</span>
                   )}
