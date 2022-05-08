@@ -7,7 +7,6 @@ import AddItem from "./Components/Pages/Items/AddItem/AddItem";
 import Inventories from "./Components/Pages/Items/Inventories/Inventories";
 import ItemDetails from "./Components/Pages/Items/ItemDetails/ItemDetails";
 import ManageItems from "./Components/Pages/Items/ManageItems/ManageItems";
-import MyItem from "./Components/Pages/Items/MyItem/MyItem";
 import Login from "./Components/Pages/Login/Login/Login";
 import SignUp from "./Components/Pages/Login/SignUp/SignUp";
 import Footer from "./Components/Pages/Shared/Footer/Footer";
@@ -36,14 +35,6 @@ function App() {
           element={
             <RequireAuth>
               <AddItem />
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/myitem"
-          element={
-            <RequireAuth>
-              <MyItem />
             </RequireAuth>
           }
         ></Route>
