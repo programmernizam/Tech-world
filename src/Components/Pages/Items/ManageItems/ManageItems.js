@@ -1,5 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import useItem from "../../../Hooks/useItem/useItem";
 import ManageItem from "../ManageItem/ManageItem";
@@ -19,13 +20,20 @@ const ManageItems = () => {
           const remaining = items.filter((item) => item._id !== id);
           setItems(remaining);
         });
-        setItems([])
+      setItems([]);
     }
   };
   return (
     <div>
       <h2 className="text-center my-4">Manage your Items here</h2>
-      <Table striped bordered hover>
+      <div className="text-center my-3">
+        <button className="btn btn-success rounded-pill px-5">
+          <Link className="text-decoration-none text-light" to={"/additem"}>
+            Add Item
+          </Link>
+        </button>
+      </div>
+      <Table striped bordered hover size="sm">
         <thead>
           <tr className="text-center">
             <th>Item Image</th>
@@ -33,7 +41,7 @@ const ManageItems = () => {
             <th>Price</th>
             <th>Seller Name</th>
             <th>Quantity</th>
-            <th>Edit/Delete</th>
+            <th>Add/Delete</th>
           </tr>
         </thead>
         <tbody>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const RecentItem = ({ item }) => {
   const navigate = useNavigate();
@@ -34,14 +34,6 @@ const RecentItem = ({ item }) => {
               className="btn btn-primary rounded-pill px-5"
             >
               Update
-            </button>
-            <button className="btn btn-danger rounded-pill px-5">
-              <Link
-                className="text-decoration-none text-light"
-                to={"/manageitems"}
-              >
-                Edit
-              </Link>
             </button>
           </div>
         </Card.Body>
