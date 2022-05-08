@@ -19,6 +19,7 @@ const ManageItems = () => {
           toast("Item successfully deleted");
           const remaining = items.filter((item) => item._id !== id);
           setItems(remaining);
+          window.location.reload()
         });
       setItems([]);
     }

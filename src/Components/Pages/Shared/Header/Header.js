@@ -49,6 +49,7 @@ const Header = () => {
 
                   <Dropdown.Menu>
                     <Dropdown.Item as={CustomLink} to="additem">Add Item</Dropdown.Item>
+                    <Dropdown.Item as={CustomLink} to="myitem">My Item</Dropdown.Item>
                     <Dropdown.Item as={CustomLink} to="manageitems">Manage Item</Dropdown.Item>
                     <Dropdown.Item as={Button} onClick={handelSignOut}>Sign Out</Dropdown.Item>
                   </Dropdown.Menu>

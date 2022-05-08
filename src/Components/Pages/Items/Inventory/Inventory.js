@@ -16,7 +16,7 @@ const Inventory = ({ item }) => {
         <Card.Body className="text-center">
           <Card.Title>{name}</Card.Title>
           <Card.Text className="pe-4">
-            <div className="d-flex justify-content-between">
+            <span className="d-flex justify-content-between">
               <span className="shadow-sm p-2 border rounded">
                 Price: ${price}
               </span>
@@ -26,9 +26,9 @@ const Inventory = ({ item }) => {
               <span className="shadow-sm p-2 border rounded">
                 Seller: {seller}
               </span>
-            </div>
+            </span>
           </Card.Text>
-          <Card.Text title={description}>{description.slice(0, 160)}</Card.Text>
+          <Card.Text title={description}>{description?.slice(0, 100)}</Card.Text>
           <div className="d-flex justify-content-around">
             <button
               onClick={() => navigateToItemDetail(_id)}

@@ -24,11 +24,12 @@ const ItemDetails = () => {
         .then((data) => {
           if (item.quantity > 0) {
             toast("Item successfully delivered");
+            window.location.reload();
           }
-          item.quantity(data);
         });
+    } else {
+      toast("Item have out of stock");
     }
-    toast("Item have out of stock")
   };
 
   const handleStock = (e) => {
@@ -48,6 +49,7 @@ const ItemDetails = () => {
         .then((data) => {
           toast("Successfully added stocks");
           e.target.reset();
+          window.location.reload()
         });
     } else {
       toast.error("put a valid integer number", {
