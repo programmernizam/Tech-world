@@ -10,7 +10,7 @@ const ItemDetails = () => {
   const handleDelivered = () => {
     const updateQuantity = item?.quantity - 1;
     // send update data to the server
-    const url = `http://localhost:4200/items/${itemId}`;
+    const url = `https://quiet-sands-26329.herokuapp.com/items/${itemId}`;
     console.log(url);
     fetch(url, {
       method: "put",
@@ -28,7 +28,7 @@ const ItemDetails = () => {
     if (number > 0) {
       const updateQuantity = item?.quantity + parseInt(number);
       // send update data to the server
-      fetch(`http://localhost:4200/items/${itemId}`, {
+      fetch(`https://quiet-sands-26329.herokuapp.com/items/${itemId}`, {
         method: "put",
         headers: {
           "content-type": "application/json",
