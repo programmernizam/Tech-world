@@ -1,7 +1,7 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
-import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
 
 const AddItem = () => {
@@ -9,7 +9,7 @@ const AddItem = () => {
   const [user] = useAuthState(auth);
   const onSubmit = (data, event) => {
     event.preventDefault();
-    const url = `https://quiet-sands-26329.herokuapp.com/items`;
+    const url = `https://tech-word-server.onrender.com/items`;
     fetch((url), {
       method: "POST",
       headers: {

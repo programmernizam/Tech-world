@@ -11,7 +11,7 @@ const ItemDetails = () => {
     if (item.quantity > 0) {
       const updateQuantity = item?.quantity - 1;
       // send update data to the server
-      const url = `https://quiet-sands-26329.herokuapp.com/items/${itemId}`;
+      const url = `https://tech-word-server.onrender.com/items/${itemId}`;
       console.log(url);
       fetch(url, {
         method: "put",
@@ -38,7 +38,7 @@ const ItemDetails = () => {
     if (number > 0) {
       const updateQuantity = item?.quantity + parseInt(number);
       // send update data to the server
-      fetch(`https://quiet-sands-26329.herokuapp.com/items/${itemId}`, {
+      fetch(`https://tech-word-server.onrender.com/items/${itemId}`, {
         method: "put",
         headers: {
           "content-type": "application/json",

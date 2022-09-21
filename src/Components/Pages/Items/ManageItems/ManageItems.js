@@ -10,7 +10,7 @@ const ManageItems = () => {
   const handelDelete = (id) => {
     const proceed = window.confirm("Are You sure?");
     if (proceed) {
-      const url = `https://quiet-sands-26329.herokuapp.com/items/${id}`;
+      const url = `https://tech-word-server.onrender.com/items/${id}`;
       fetch(url, {
         method: "DELETE",
       })
